@@ -93,6 +93,9 @@ export default class CheckBox extends Component {
             <Image source={source} style={{tintColor: this.props.checkBoxColor}} />
         );
     }
+    componentWillReceiveProps(nextProps) {
+     this.setState({isChecked: nextProps.isChecked})
+ }
 
     render() {
         return (
